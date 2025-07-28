@@ -144,12 +144,13 @@ A clinical dataset from the **Kaggle Repository** was used to evaluate diabetic 
 ### Files & Folders
 
 
-| File/Folder                  | Description                                             |
-|-----------------------------|---------------------------------------------------------|
+| File/Folder                  | Description                                           |
+|-----------------------------|--------------------------------------------------------|
 | `README.md`                 | Project overview and documentation                     |
 | `DIRAPR.py`                 | Streamlit app source code                              |
 | `DIRAPR.pkl`                | Saved Random Forest model                              |
 | `diabetic_data.csv`         | Source dataset                                         |
+| `requirement.txt`           | Streamlit Deployment Related                           |
 
 Naming Convention: All program files follow the naming prefix DIRAPR, an acronym for Diabetic Readmission Prediction, which reflects the central                objective of this machine learning project.
 
