@@ -2,13 +2,13 @@
     <h4>University of Berkeley: Machine Learning and AI Capstone Project (July 2025)</h4>
 </div>
 
-# 📈 Diabetes Readmission Prediction Using Machine Learning Models
+# Diabetes Readmission Prediction Using Machine Learning Models
 
 This project analyzes the `diabetic_data.csv` dataset to predict patient readmission within 30 days. It covers data cleaning, feature engineering, model training, evaluation, and deployment.
 
 ---
 
-## 🧾 Executive Summary
+## Executive Summary
 
 Hospital readmissions, especially among diabetic patients, are a significant burden on healthcare systems both financially and in terms of patient care quality. This project aims to develop a machine learning model that accurately predicts whether a patient with diabetes is likely to be readmitted within 30 days of discharge.
 
@@ -16,13 +16,13 @@ Using a cleaned dataset derived from over 100,000 hospital encounters involving 
 
 ---
 
-## 🎯 Rationale
+## Rationale
 
 This project is driven by the need to reduce preventable readmissions among diabetic patients by leveraging historical healthcare data and machine learning. It aims to enhance clinical decision-making, reduce healthcare costs, and improve patient outcomes through early risk identification and targeted interventions.
 
 ---
 
-## 🔍 Research Question
+## Research Question
 
 **Can we accurately predict whether a diabetic patient will be readmitted to the hospital within 30 days of discharge based on historical clinical and demographic data?**  
 The goal is early identification of high-risk diabetic patients to reduce readmissions, improve patient outcomes, and optimize healthcare resource utilization.
@@ -35,7 +35,7 @@ A clinical dataset from the **Kaggle Repository** was used to evaluate diabetic 
 
 ---
 
-## 🛠️ Methodology
+## Methodology
 
 ### 1. Data Preparation
 - **Data Cleaning**: Handle missing values, remove irrelevant columns, drop duplicates.
@@ -81,7 +81,7 @@ A clinical dataset from the **Kaggle Repository** was used to evaluate diabetic 
 
 ---
 
-## ✅ Results
+## Results
 
 ### 1. Model Performance
 - **Best Model**: XGBoost or Random Forest
@@ -112,7 +112,7 @@ A clinical dataset from the **Kaggle Repository** was used to evaluate diabetic 
 
 ---
 
-## 🔄 Next Steps
+## Next Steps
 
 ### 1. Model Enhancement
 - Hyperparameter tuning (Bayesian)
@@ -174,19 +174,26 @@ Naming Convention: All program files follow the naming prefix DIRAPR, an acronym
 
 ---
 
-### 🚀 How to Run the App
+### How to Run the App
+To run the Diabetic Readmission Prediction (DIRAPR) Streamlit app locally or explore it online, follow the steps below:
 
-1. Install dependencies:
+---
+#### Option 1: Run Locally
+1. **Install Required Dependencies**
 ```bash
 pip install streamlit pandas scikit-learn xgboost matplotlib seaborn
 ```
-
-2. Launch the app:
+2. **Launch the Streamlit App**
 ```bash
 streamlit run DIRAPR.py
 ```
+3. **Ensure Model File is Present**
+Make sure the trained model file `DIRAPR.pkl` is available in the same directory as `DIRAPR.py`.
 
-3. Make sure `DIRAPR.pkl` is available in the working directory.
+---
+#### Option 2: Access Online (No Setup Needed)
+You can also access the deployed app directly via Streamlit Cloud:
+👉 [Click here to open the app](https://module24-capstone-project-kep8mwvqbhmgtrnlfwg8d7.streamlit.app/)
 
 ---
 
