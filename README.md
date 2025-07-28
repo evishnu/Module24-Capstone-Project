@@ -16,46 +16,46 @@ Using a cleaned dataset derived from over 100,000 hospital encounters involving 
 
 ---
 
-## Rationale
+### Rationale
 
 This project is driven by the need to reduce preventable readmissions among diabetic patients by leveraging historical healthcare data and machine learning. It aims to enhance clinical decision-making, reduce healthcare costs, and improve patient outcomes through early risk identification and targeted interventions.
 
 ---
 
-## Research Question
+### Research Question
 
 **Can we accurately predict whether a diabetic patient will be readmitted to the hospital within 30 days of discharge based on historical clinical and demographic data?**  
 The goal is early identification of high-risk diabetic patients to reduce readmissions, improve patient outcomes, and optimize healthcare resource utilization.
 
 ---
 
-## 🗂️ Data Sources
+### 🗂️ Data Sources
 
 A clinical dataset from the **Kaggle Repository** was used to evaluate diabetic patient readmissions within 30 days.
 
 ---
 
-## Methodology
+### Methodology
 
-### 1. Data Preparation
+#### i. Data Preparation
 - **Data Cleaning**: Handle missing values, remove irrelevant columns, drop duplicates.
 - **Encoding**: Use One-Hot or Label Encoding for categorical features.
 - **Scaling**: Normalize numerical features for models like SVM.
 - **Class Balancing**: Use SMOTE or class weights to address class imbalance.
 
-### 2. Exploratory Data Analysis (EDA)
+#### ii. Exploratory Data Analysis (EDA)
 - Histograms, boxplots, and correlation heatmaps.
 - Analyze target class distribution.
 - Feature relevance via distribution plots and correlation.
 
-### 3. Modeling Techniques
+#### iii. Modeling Techniques
 - **Logistic Regression**: Baseline model
 - **Decision Tree**: Easy to interpret
 - **Random Forest**: Ensemble method for accuracy
 - **XGBoost**: High-performance gradient boosting
 - **SVM**: Effective in high-dimensional space
 
-### 4. Model Evaluation
+#### iv. Model Evaluation
 - **Train/Test Split**: 80/20 or cross-validation
 - Metrics:
   - Accuracy
@@ -64,26 +64,26 @@ A clinical dataset from the **Kaggle Repository** was used to evaluate diabetic 
   - ROC-AUC
   - Confusion Matrix
 
-### 5. Model Comparison & Selection
+#### v. Model Comparison & Selection
 - Use cross-validation and ROC curves
 - Visual tools:
   - Confusion matrix plots
   - ROC-AUC curves
   - Feature importance
 
-### 6. Model Interpretability
+#### vi. Model Interpretability
 - Feature importance for tree-based models
 - Optional SHAP values for interpretability
 
-### 7. Deployment
+#### vii. Deployment
 - **Streamlit App**: Web UI for predictions
 - **Model Serialization**: Save best model as `DIRAPR.pkl`
 
 ---
 
-## Results
+### Results
 
-### 1. Model Performance
+#### i. Model Performance
 - **Best Model**: XGBoost or Random Forest
 - **XGBoost Metrics**:
   - Accuracy: ~86%
@@ -91,7 +91,7 @@ A clinical dataset from the **Kaggle Repository** was used to evaluate diabetic 
   - Precision (Readmitted): ~0.81
   - Recall (Readmitted): ~0.85
 
-### 2. Key Predictive Features
+#### ii. Key Predictive Features
 - `number_inpatient`
 - `num_lab_procedures`
 - `number_emergency`
@@ -99,12 +99,12 @@ A clinical dataset from the **Kaggle Repository** was used to evaluate diabetic 
 - `number_medications`
 - `change`, `diabetesMed`, `insulin`
 
-### 3. Clinical Insights
+#### iii. Clinical Insights
 - Frequent hospital interactions → high risk
 - Medication changes signal acute health shifts
 - Age & discharge disposition are moderate predictors
 
-### 4. Operational Outcome
+#### iv. Operational Outcome
 - Developed a Streamlit app:
   - Input patient data
   - Real-time risk prediction
@@ -112,36 +112,36 @@ A clinical dataset from the **Kaggle Repository** was used to evaluate diabetic 
 
 ---
 
-## Next Steps
+### Next Steps
 
-### 1. Model Enhancement
+#### i. Model Enhancement
 - Hyperparameter tuning (Bayesian)
 - SHAP/ELI5 for interpretability
 - Deep learning (LSTM) for sequential data
 
-### 2. Data Expansion
+#### ii. Data Expansion
 - Add Social Determinants of Health (SDoH)
 - Capture temporal visit trends
 - Validate on external datasets
 
-### 3. Clinical Integration
+#### iii. Clinical Integration
 - Connect with EHR systems (Epic/Cerner)
 - Embed in case manager workflows
 - A/B test in real clinical settings
 
-### 4. Monitoring & Feedback
+#### iv. Monitoring & Feedback
 - Build monitoring dashboard
 - Gather clinician feedback
 
-### 5. Scalability & Policy Impact
+#### v. Scalability & Policy Impact
 - Extend model to other chronic diseases
 - Share findings to support value-based care models
 
 ---
 
-## 📦 Project Structure
+### 📦 Project Structure
 
-### Files & Folders
+#### Files & Folders
 
 
 | File/Folder                  | Description                                           |
@@ -180,15 +180,15 @@ To run the Diabetic Readmission Prediction (DIRAPR) Streamlit app locally or exp
 
 ---
 #### Option 1: Run Locally
-1. **Install Required Dependencies**
+i. **Install Required Dependencies**
 ```bash
 pip install streamlit pandas scikit-learn xgboost matplotlib seaborn
 ```
-2. **Launch the Streamlit App**
+ii. **Launch the Streamlit App**
 ```bash
 streamlit run DIRAPR.py
 ```
-3. **Ensure Model File is Present**
+iii. **Ensure Model File is Present**
 Make sure the trained model file `DIRAPR.pkl` is available in the same directory as `DIRAPR.py`.
 
 ---
@@ -199,10 +199,7 @@ You can also access the deployed app directly via Streamlit Cloud:
 ---
 
 ## 🙏 Acknowledgment
-The dataset used in this project was sourced from the Kaggle Repository.
-
 A heartfelt thank you to the entire teaching staff — Aravind Reddy, Savio Saldhana, Amit Jambhekar, and Jessica Cervi — for their invaluable guidance, insights, and encouragement throughout this learning journey.
 
 Sincere appreciation to the University of California, Berkeley for providing a rigorous and enriching academic environment.
 
-Special thanks to Leanna Biddle for her outstanding coordination and behind-the-scenes support.
